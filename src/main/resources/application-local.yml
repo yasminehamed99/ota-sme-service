@@ -1,0 +1,31 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/xe
+    username: ONBOARDING
+    password: ONBOARDING
+    connectionFactoryClassName: oracle.jdbc.pool.OracleDataSource
+    connectionWaitTimeout: 10
+    inactiveConnectionTimeout: 10
+    initialPoolSize: 10
+    validateConnectionOnBorrow: true
+    driver-class-name: oracle.jdbc.OracleDriver
+    hikari:
+      driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+qr:
+  switch-off: true
+  signing:
+    private:
+      key: ${PRIVATE_KEY_ENCODED_BASE64:TUhRQ0FRRUVJSktRMHVGVHEvT2dVTlNkdWdxWFFOZlNYQU9LRms3OHRJN251NE1VUVJuUG9BY0dCU3VCQkFBS29VUURRZ0FFcHJoT2ZCQThBQ08rblRWWTdrOGY3S3Q0YUowVXRiNTVMVVBMbW5WVXN2WXA5L2dPSDIyaXgyTm9LT2JyUUt3L1FJNU4xd2EzZzNhMS95bnBVSjhDZkE9PQ==}
+  generation:
+    service:
+      id: 1ba47f64-f34f-48eb-b3b4-cb1208d20105
+    url: http://be.qr.test.jo/qr/build/1ba47f64-f34f-48eb-b3b4-cb1208d20105
+server:
+  port: 8088
